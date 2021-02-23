@@ -1,16 +1,10 @@
-<Shapes xmlns="http://www.evolus.vn/Namespace/Pencil"  
-        xmlns:p="http://www.evolus.vn/Namespace/Pencil"  
-        xmlns:svg="http://www.w3.org/2000/svg"  
-        xmlns:xlink="http://www.w3.org/1999/xlink"  
-      
-        id="uml"  
-            displayName="UML"  
-            description="UML stencyl"  
-            author="Marcelo D. Ré"  
-            url="Optional URL to its web page">  
-              
-            <!-- Your shapes go here -->  
-              
+<Shapes xmlns="http://www.evolus.vn/Namespace/Pencil"
+    xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" id="uml" displayName="UML" description="UML stencyl" author="Marcelo D. Ré" url="Optional URL to its web page">
+
+    <!-- Your shapes go here -->
+
     <Properties>
         <PropertyGroup name="Background">
             <Property displayName="Background" name="fillColor" type="Color">#BDDFFFFF</Property>
@@ -81,10 +75,18 @@
         <PropertyValue name="withEndArrow">true</PropertyValue>
     </Shortcut>-->
     <Shortcut displayName="Association" icon="Icons/multi-segment-connector.png" to="Evolus.Common:arrow">
-        <PropertyValue name="textFont"><E>$$defaultTextFont</E></PropertyValue>
-        <PropertyValue name="textColor"><E>$$defaultTextColor</E></PropertyValue>
-        <PropertyValue name="strokeColor"><E>$$strokeColor</E></PropertyValue>
-        <PropertyValue name="strokeStyle"><E>$$strokeStyle</E></PropertyValue>
+        <PropertyValue name="textFont">
+            <E>$$defaultTextFont</E>
+        </PropertyValue>
+        <PropertyValue name="textColor">
+            <E>$$defaultTextColor</E>
+        </PropertyValue>
+        <PropertyValue name="strokeColor">
+            <E>$$strokeColor</E>
+        </PropertyValue>
+        <PropertyValue name="strokeStyle">
+            <E>$$strokeStyle</E>
+        </PropertyValue>
         <PropertyValue name="mode">multi-straight</PropertyValue>
         <PropertyValue name="withStartArrow">false</PropertyValue>
         <PropertyValue name="withEndArrow">true</PropertyValue>
@@ -105,7 +107,7 @@
                 <Property displayName="Box" name="box" type="Dimension">100,80</Property>
 
                 <Property displayName="Outpin #1 origin" name="outputPin1Origin" p:expressionX="$box.w / 2" p:expressionY="0" type="Point">50,0</Property>
-                <Property displayName="Outpin #1" name="outputPin1" p:connectTo="FCInput" p:unconnectedValue="$outputPin1Origin" type="Handle">0,0</Property>                
+                <Property displayName="Outpin #1" name="outputPin1" p:connectTo="FCInput" p:unconnectedValue="$outputPin1Origin" type="Handle">0,0</Property>
                 <Property displayName="Outpin #2 origin" name="outputPin2Origin" p:expressionX="$box.w" p:expressionY="$box.h / 2" type="Point">100,50</Property>
                 <Property displayName="Outpin #2" name="outputPin2" p:connectTo="FCInput" p:unconnectedValue="$outputPin2Origin" type="Handle">0,0</Property>
                 <Property displayName="Outpin #3 origin" name="outputPin3Origin" p:expressionX="$box.w / 2" p:expressionY="$box.h" type="Point">50,100</Property>
@@ -137,29 +139,25 @@
                 <Property displayName="Text Align" name="textAlign" type="Alignment">1,1</Property>
             </PropertyGroup>
             <PropertyGroup name="Option Texts">
-                <Property displayName="Option Text 1" name="optionText1" type="PlainText"
-                    p:editInfo="
+                <Property displayName="Option Text 1" name="optionText1" type="PlainText" p:editInfo="
                     var targetBox = F.getObjectBoundingBox('text1');
                     var sizeBox = F.textSize('text1');
                     var newBox = new Bound(targetBox.x, targetBox.y + ((sizeBox.h / 2) - 10), Math.sqrt((sizeBox.w * sizeBox.w) + (sizeBox.h * sizeBox.h)) + 10 , 20);
                     ({targetName: 'text1', bound: newBox
                     , font: $optionTextFont, color: $optionTextColor, align: new Alignment(1, 1)})"><![CDATA[]]></Property>
-                <Property displayName="Option Text 2" name="optionText2" type="PlainText"
-                    p:editInfo="
+                <Property displayName="Option Text 2" name="optionText2" type="PlainText" p:editInfo="
                     var targetBox = F.getObjectBoundingBox('text2');
                     var sizeBox = F.textSize('text2');
                     var newBox = new Bound(targetBox.x, targetBox.y + ((sizeBox.h / 2) - 10), Math.sqrt((sizeBox.w * sizeBox.w) + (sizeBox.h * sizeBox.h)) + 10 , 20);
                     ({targetName: 'text2', bound: newBox
-                    , font: $optionTextFont, color: $optionTextColor, align: new Alignment(1, 1)})" ><![CDATA[]]></Property>
-                <Property displayName="Option Text 3" name="optionText3" type="PlainText"
-                    p:editInfo="
+                    , font: $optionTextFont, color: $optionTextColor, align: new Alignment(1, 1)})"><![CDATA[]]></Property>
+                <Property displayName="Option Text 3" name="optionText3" type="PlainText" p:editInfo="
                     var targetBox = F.getObjectBoundingBox('text3');
                     var sizeBox = F.textSize('text3');
                     var newBox = new Bound(targetBox.x, targetBox.y + ((sizeBox.h / 2) - 10), Math.sqrt((sizeBox.w * sizeBox.w) + (sizeBox.h * sizeBox.h)) + 10 , 20);
                     ({targetName: 'text3', bound: newBox
                     , font: $optionTextFont, color: $optionTextColor, align: new Alignment(1, 1)})"><![CDATA[]]></Property>
-                <Property displayName="Option Text 4" name="optionText4" type="PlainText"
-                    p:editInfo="
+                <Property displayName="Option Text 4" name="optionText4" type="PlainText" p:editInfo="
                     var targetBox = F.getObjectBoundingBox('text4');
                     var sizeBox = F.textSize('text4');
                     var newBox = new Bound(targetBox.x, targetBox.y + ((sizeBox.h / 2) - 10), Math.sqrt((sizeBox.w * sizeBox.w) + (sizeBox.h * sizeBox.h)) + 10 , 20);
@@ -284,7 +282,7 @@
             <Action id="getSnappingGuide">
                 <Impl>return this.def.collection.buildSnappingGuides(this);</Impl>
             </Action>
-            
+
             <Action id="getConnectorOutlets">
                 <Impl>
                     <![CDATA[
@@ -343,16 +341,16 @@
             <path id="outputArrrow4" style="stroke-linejoin: round; fill: none;" />
         </p:Content>
     </Shape>
-    
-    
-    <Shape id="aggregation" displayName="Aggregation" icon="Icons/aggregation.png">  
-        <Properties>  
-            <PropertyGroup>  
+
+
+    <Shape id="aggregation" displayName="Aggregation" icon="Icons/aggregation.png">
+        <Properties>
+            <PropertyGroup>
                 <Property displayName="Start" name="startPin" p:connectTo="*" type="Handle">0,0</Property>
-                <Property name="outDir" displayName="Point" type="Handle">25,0</Property>  
-                <Property name="a" displayName="Point" type="Handle">75,0</Property>  
-                <Property displayName="End" name="endPin" p:connectTo="*" type="Handle">100,50</Property> 
-            </PropertyGroup>  
+                <Property name="outDir" displayName="Point" type="Handle">25,0</Property>
+                <Property name="a" displayName="Point" type="Handle">75,0</Property>
+                <Property displayName="End" name="endPin" p:connectTo="*" type="Handle">100,50</Property>
+            </PropertyGroup>
             <PropertyGroup name="Border">
                 <Property displayName="Border Color" name="strokeColor" type="Color">
                     <E>$$strokeColor</E>
@@ -361,10 +359,9 @@
                     <E>$$strokeStyle</E>
                 </Property>
             </PropertyGroup>
-            
+
             <PropertyGroup name="Text">
-                <Property displayName="Content" name="textContent"
-                    p:editInfo="var targetBox = F.getObjectBoundingBox('text');
+                <Property displayName="Content" name="textContent" p:editInfo="var targetBox = F.getObjectBoundingBox('text');
                     var sizeBox = F.textSize('text');
                     var newBox = new Bound(targetBox.x, targetBox.y + ((sizeBox.h / 2) - 10), Math.sqrt((sizeBox.w * sizeBox.w) + (sizeBox.h * sizeBox.h)) + 10 , 20);
                     ({targetName: 'text', bound: newBox
@@ -377,12 +374,12 @@
                 </Property>
                 <Property displayName="Align" name="textAlign" type="Alignment">1,1</Property>
             </PropertyGroup>
-            
-        </Properties>  
-        <Behaviors>  
-            <For ref="path">  
-                <StrokeColor>$strokeColor</StrokeColor>  
-                <StrokeStyle>$strokeStyle</StrokeStyle>  
+
+        </Properties>
+        <Behaviors>
+            <For ref="path">
+                <StrokeColor>$strokeColor</StrokeColor>
+                <StrokeStyle>$strokeStyle</StrokeStyle>
                 <D><![CDATA[
                     xFact = 1;
                     yFact = 1;
@@ -447,14 +444,14 @@
                     
                     result
                     ]]>
-                    </D>  
+                </D>
             </For>
-            
+
             <For ref="text">
                 <Color>$textColor</Color>
                 <Font>$textFont</Font>
             </For>
-            
+
             <For ref="textSpan">
                 <InnerText>$textContent</InnerText>
                 <Attr>
@@ -471,31 +468,31 @@
                     </Arg>
                 </Attr>
             </For>
-        </Behaviors>  
-        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"  
-                    xmlns="http://www.w3.org/2000/svg">  
+        </Behaviors>
+        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+            xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <path id="path" style="stroke-linejoin: round; fill: none;" />
             </defs>
             <use xlink:href="#path" stroke-width="10" stroke-opacity="0" stroke="#FF0000" />
-            
+
             <text id="text">
                 <textPath xlink:href="#path" startOffset="50" text-anchor="left" alignment-baseline="middle">
                     <tspan id="textSpan" dy="-5">Text along a curved path</tspan>
                 </textPath>
             </text>
 
-        </p:Content>  
+        </p:Content>
     </Shape>
-    
-    <Shape id="composition" displayName="Composition" icon="Icons/composition.png">  
-        <Properties>  
-            <PropertyGroup>  
+
+    <Shape id="composition" displayName="Composition" icon="Icons/composition.png">
+        <Properties>
+            <PropertyGroup>
                 <Property displayName="Start" name="startPin" p:connectTo="*" type="Handle">0,0</Property>
-                <Property name="outDir" displayName="Point" type="Handle">25,0</Property>  
-                <Property name="a" displayName="Point" type="Handle">75,0</Property>  
-                <Property displayName="End" name="endPin" p:connectTo="*" type="Handle">100,50</Property> 
-            </PropertyGroup>  
+                <Property name="outDir" displayName="Point" type="Handle">25,0</Property>
+                <Property name="a" displayName="Point" type="Handle">75,0</Property>
+                <Property displayName="End" name="endPin" p:connectTo="*" type="Handle">100,50</Property>
+            </PropertyGroup>
             <PropertyGroup name="Border">
                 <Property displayName="Border Color" name="strokeColor" type="Color">
                     <E>$$strokeColor</E>
@@ -504,10 +501,9 @@
                     <E>$$strokeStyle</E>
                 </Property>
             </PropertyGroup>
-            
+
             <PropertyGroup name="Text">
-                <Property displayName="Content" name="textContent"
-                    p:editInfo="var targetBox = F.getObjectBoundingBox('text');
+                <Property displayName="Content" name="textContent" p:editInfo="var targetBox = F.getObjectBoundingBox('text');
                     var sizeBox = F.textSize('text');
                     var newBox = new Bound(targetBox.x, targetBox.y + ((sizeBox.h / 2) - 10), Math.sqrt((sizeBox.w * sizeBox.w) + (sizeBox.h * sizeBox.h)) + 10 , 20);
                     ({targetName: 'text', bound: newBox
@@ -520,12 +516,12 @@
                 </Property>
                 <Property displayName="Align" name="textAlign" type="Alignment">1,1</Property>
             </PropertyGroup>
-            
-        </Properties>  
-        <Behaviors>  
-            <For ref="path">  
-                <StrokeColor>$strokeColor</StrokeColor>  
-                <StrokeStyle>$strokeStyle</StrokeStyle>  
+
+        </Properties>
+        <Behaviors>
+            <For ref="path">
+                <StrokeColor>$strokeColor</StrokeColor>
+                <StrokeStyle>$strokeStyle</StrokeStyle>
                 <D><![CDATA[
                     xFact = 1;
                     yFact = 1;
@@ -589,14 +585,14 @@
                     
                     result
                     ]]>
-                    </D>  
+                </D>
             </For>
-            
+
             <For ref="text">
                 <Color>$textColor</Color>
                 <Font>$textFont</Font>
             </For>
-            
+
             <For ref="textSpan">
                 <InnerText>$textContent</InnerText>
                 <Attr>
@@ -613,31 +609,31 @@
                     </Arg>
                 </Attr>
             </For>
-        </Behaviors>  
-        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"  
-                    xmlns="http://www.w3.org/2000/svg">  
+        </Behaviors>
+        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+            xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <path id="path" style="stroke-linejoin: round; fill: none;" />
             </defs>
             <use xlink:href="#path" stroke-width="10" stroke-opacity="0" stroke="#FF0000" />
-            
+
             <text id="text">
                 <textPath xlink:href="#path" startOffset="70" text-anchor="left" alignment-baseline="middle">
                     <tspan id="textSpan" dy="-5">Text along a curved path</tspan>
                 </textPath>
             </text>
 
-        </p:Content>  
+        </p:Content>
     </Shape>
-    
-    
-    <Shape id="generalization" displayName="Generalization" icon="Icons/generalization.png">  
-        <Properties>  
-            <PropertyGroup>  
+
+
+    <Shape id="generalization" displayName="Generalization" icon="Icons/generalization.png">
+        <Properties>
+            <PropertyGroup>
                 <Property displayName="Start" name="startPin" p:connectTo="*" type="Handle">0,0</Property>
-                <Property name="outDir" displayName="Point" type="Handle">15,0</Property>  
-                <Property name="a" displayName="Point" type="Handle">75,0</Property>  
-                <Property displayName="End" name="endPin" p:connectTo="*" type="Handle">100,50</Property> 
+                <Property name="outDir" displayName="Point" type="Handle">15,0</Property>
+                <Property name="a" displayName="Point" type="Handle">75,0</Property>
+                <Property displayName="End" name="endPin" p:connectTo="*" type="Handle">100,50</Property>
             </PropertyGroup>
             <PropertyGroup name="Border">
                 <Property displayName="Border Color" name="strokeColor" type="Color">
@@ -647,11 +643,10 @@
                     <E>$$strokeStyle</E>
                 </Property>
             </PropertyGroup>
-            
-            
+
+
             <PropertyGroup name="Text">
-                <Property displayName="Content" name="textContent"
-                    p:editInfo="var targetBox = F.getObjectBoundingBox('text');
+                <Property displayName="Content" name="textContent" p:editInfo="var targetBox = F.getObjectBoundingBox('text');
                     var sizeBox = F.textSize('text');
                     var newBox = new Bound(targetBox.x, targetBox.y + ((sizeBox.h / 2) - 10), Math.sqrt((sizeBox.w * sizeBox.w) + (sizeBox.h * sizeBox.h)) + 10 , 20);
                     ({targetName: 'text', bound: newBox
@@ -664,12 +659,12 @@
                 </Property>
                 <Property displayName="Align" name="textAlign" type="Alignment">1,1</Property>
             </PropertyGroup>
-            
-        </Properties>  
-        <Behaviors>  
-            <For ref="path">  
-                <StrokeColor>$strokeColor</StrokeColor>  
-                <StrokeStyle>$strokeStyle</StrokeStyle>  
+
+        </Properties>
+        <Behaviors>
+            <For ref="path">
+                <StrokeColor>$strokeColor</StrokeColor>
+                <StrokeStyle>$strokeStyle</StrokeStyle>
                 <D><![CDATA[
                     xFact = 1;
                     yFact = 1;
@@ -733,14 +728,14 @@
                     
                     result
                     ]]>
-                    </D>  
+                </D>
             </For>
-            
+
             <For ref="text">
                 <Color>$textColor</Color>
                 <Font>$textFont</Font>
             </For>
-            
+
             <For ref="textSpan">
                 <InnerText>$textContent</InnerText>
                 <Attr>
@@ -757,23 +752,23 @@
                     </Arg>
                 </Attr>
             </For>
-        </Behaviors>  
-        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"  
-                    xmlns="http://www.w3.org/2000/svg">  
+        </Behaviors>
+        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+            xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <path id="path" style="stroke-linejoin: round; fill: none;" />
             </defs>
             <use xlink:href="#path" stroke-width="10" stroke-opacity="0" stroke="#FF0000" />
-            
+
             <text id="text">
                 <textPath xlink:href="#path" startOffset="40" text-anchor="left" alignment-baseline="middle">
                     <tspan id="textSpan" dy="-5">Text along a curved path</tspan>
                 </textPath>
             </text>
 
-        </p:Content>  
+        </p:Content>
     </Shape>
-    
+
     <Shape id="freecurvy" displayName="free cruvy" icon="Icons/freecurvy.png">
         <Properties>
             <PropertyGroup name="Common">
@@ -863,102 +858,8 @@
                 </D>
             </For>
         </Behaviors>
-        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil" xmlns="http://www.w3.org/2000/svg">
-            <path id="path" fill="none" style="stroke-linejoin: round;" />
-        </p:Content>
-    </Shape>
-      <Shape id="freecurvy2" displayName="free cruvy 2" icon="Icons/freecurvy.png">
-        <Properties>
-            <PropertyGroup name="Common">
-                <Property displayName="Start" name="startPin" p:connectTo="*" type="Handle">0,0</Property>
-                <Property displayName="b" name="b" type="Handle">100,60</Property>
-                <Property displayName="c" name="c" type="Handle">200,140</Property>
-                <Property displayName="End" name="endPin" p:connectTo="*" type="Handle">300,180</Property>
-                <Property displayName="EndArw" name="EndArw" type="Handle">280,160</Property>
-                <Property displayName="Start Arrow" name="withStartArrow" type="Bool">true</Property>
-                <Property displayName="End Arrow" name="withEndArrow" type="Bool">false</Property>
-            </PropertyGroup>
-            <PropertyGroup name="Border">
-                <Property displayName="Border Color" name="strokeColor" type="Color">
-                    <E>$$strokeColor</E>
-                </Property>
-                <Property displayName="Border Style" name="strokeStyle" type="StrokeStyle">
-                    <E>$$strokeStyle</E>
-                </Property>
-            </PropertyGroup>
-        </Properties>
-        <Behaviors>
-            <For ref="path">
-                <StrokeColor>$strokeColor</StrokeColor>
-                <StrokeStyle>$strokeStyle</StrokeStyle>
-                <D>
-                    <![CDATA[
-                    var spec = [M($startPin.x, $startPin.y), Q( $b.x, $b.y, $c.x,$c.y ),T($endPin.x, $endPin.y)]
-
-                    len = 8
-
-                    if($withStartArrow.value==true){
-
-						aA = ($b.x - $startPin.x == 0)  ?  0 :  Math.atan(($b.y - $startPin.y) / ($b.x - $startPin.x))
-                        aB = aA + Math.PI/4
-                        aC = aA - Math.PI/4
-                        console.log( "aA aB aC = " + aA + ", " + aB + ", " + aC)
-
-                        if($b.x - $startPin.x >= 1e-3 ){ 
-                            console.log(">>")
-                            x00 = $startPin.x + len * Math.cos(aB)
-                            y00 = $startPin.y + len * Math.sin(aB)
-                            x01 = $startPin.x + len * Math.cos(aC) 
-                            y01 = $startPin.y + len * Math.sin(aC)
-
-                        }else if($b.x - $startPin.x < 1e-3){
-                            console.log("<<")
-                            x00 = $startPin.x - len * Math.cos(aB)
-                            y00 = $startPin.y - len * Math.sin(aB)
-                            x01 = $startPin.x - len * Math.cos(aC)
-                            y01 = $startPin.y - len * Math.sin(aC)
-
-                        }
-                        console.log("x00, y00, x01, y01: (" + x00 + " " + y00 + " ) (" + x01 + " " + y01 + " )")
-
-                        spec.unshift(M($startPin.x, $startPin.y), L(x00, y00),
-                                    M($startPin.x, $startPin.y), L(x01, y01));
-                    }
-
-                    if($withEndArrow.value==true){
-
-						aA = ($EndArw.x - $endPin.x == 0)  ?  0 :  Math.atan(($EndArw.y - $endPin.y) / ($EndArw.x - $endPin.x))
-                        aB = aA + Math.PI/4
-                        aC = aA - Math.PI/4
-                        console.log( "aA aB aC = " + aA + ", " + aB + ", " + aC)
-
-                        if($EndArw.x - $endPin.x >= 1e-3 ){ 
-                            console.log(">>")
-                            x00 = $endPin.x + len * Math.cos(aB)
-                            y00 = $endPin.y + len * Math.sin(aB)
-                            x01 = $endPin.x + len * Math.cos(aC) 
-                            y01 = $endPin.y + len * Math.sin(aC)
-
-                        }else if($EndArw.x - $endPin.x < 1e-3){
-                            console.log("<<")
-                            x00 = $endPin.x - len * Math.cos(aB)
-                            y00 = $endPin.y - len * Math.sin(aB)
-                            x01 = $endPin.x - len * Math.cos(aC)
-                            y01 = $endPin.y - len * Math.sin(aC)
-
-                        }
-                        console.log("x00, y00, x01, y01: (" + x00 + " " + y00 + " ) (" + x01 + " " + y01 + " )")
-
-                        spec.unshift(M($endPin.x, $endPin.y), L(x00, y00),
-                                    M($endPin.x, $endPin.y), L(x01, y01));
-                    }
-
-                    spec
-                ]]>
-                </D>
-            </For>
-        </Behaviors>
-        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil" xmlns="http://www.w3.org/2000/svg">
+        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+            xmlns="http://www.w3.org/2000/svg">
             <path id="path" fill="none" style="stroke-linejoin: round;" />
         </p:Content>
     </Shape>
@@ -1052,7 +953,8 @@
                 </D>
             </For>
         </Behaviors>
-        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil" xmlns="http://www.w3.org/2000/svg">
+        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+            xmlns="http://www.w3.org/2000/svg">
             <path id="path" fill="none" style="stroke-linejoin: round;" />
         </p:Content>
     </Shape>
@@ -1146,7 +1048,76 @@
                 </D>
             </For>
         </Behaviors>
-        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil" xmlns="http://www.w3.org/2000/svg">
+        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+            xmlns="http://www.w3.org/2000/svg">
+            <path id="path" fill="none" style="stroke-linejoin: round;" />
+        </p:Content>
+    </Shape>
+
+    <Shape id="multi-segment-line2" displayName="multi-segment-connector2" icon="Icons/multi-segment-connector2.png">
+        <Properties>
+            <PropertyGroup name="Common">
+                <Property name="startPin" displayName="Start" p:connectTo="*" type="Handle">0,0</Property>
+                <Property name="endPin" displayName="End" p:connectTo="*" type="Handle">200,200</Property>
+                <Property displayName="Start Arrow" name="withStartArrow" type="Bool">true</Property>
+                <Property displayName="End Arrow" name="withEndArrow" type="Bool">false</Property>
+            </PropertyGroup>
+            <PropertyGroup name="Border">
+                <Property displayName="Border Color" name="strokeColor" type="Color">
+                    <E>$$strokeColor</E>
+                </Property>
+                <Property displayName="Border Style" name="strokeStyle" type="StrokeStyle">
+                    <E>$$strokeStyle</E>
+                </Property>
+            </PropertyGroup>
+        </Properties>
+        <Behaviors>
+            <For ref="path">
+                <StrokeColor>$strokeColor</StrokeColor>
+                <StrokeStyle>$strokeStyle</StrokeStyle>
+                <D>
+                    <![CDATA[
+                    var spec = [M($startPin.x, $startPin.y), L($endPin.x, $startPin.y), L($endPin.x, $endPin.y)];
+
+                    if($withStartArrow.value==true){
+
+                        //arrow to left when endPin is at startPin right
+                         if( $endPin.x > $startPin.x  ){
+                            spec.unshift(M($startPin.x, $startPin.y), L($startPin.x+5, $startPin.y-5),
+                                M($startPin.x, $startPin.y), L($startPin.x+5, $startPin.y+5));
+                        }
+
+                        //arrow to right when endPin is at startPin left 
+                        if( $endPin.x < $startPin.x  ){
+                            spec.unshift(M($startPin.x, $startPin.y), L($startPin.x-5, $startPin.y-5),
+                                M($startPin.x, $startPin.y), L($startPin.x-5, $startPin.y+5));
+                        }
+
+                    }
+
+                    if($withEndArrow.value==true){
+                        
+                        //arrow to up when startPin.X is at bottom of endPin
+                        if( $endPin.y > $startPin.y ){
+                            
+                            spec.unshift(M($endPin.x, $endPin.y), L($endPin.x-5, $endPin.y-5),
+                                M($endPin.x, $endPin.y), L($endPin.x+5, $endPin.y-5));
+                        }
+
+                        //arrow to down when startPin.X is upper of endPin
+                        if( $endPin.y < $startPin.y ){
+                            spec.unshift(M($endPin.x, $endPin.y), L($endPin.x-5, $endPin.y+5),
+                                M($endPin.x, $endPin.y), L($endPin.x+5, $endPin.y+5));
+                        }
+                    }
+
+                    spec;
+                    ]]>
+                </D>
+            </For>
+        </Behaviors>
+        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+            xmlns="http://www.w3.org/2000/svg">
             <path id="path" fill="none" style="stroke-linejoin: round;" />
         </p:Content>
     </Shape>
