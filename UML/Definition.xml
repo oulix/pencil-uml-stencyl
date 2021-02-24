@@ -863,6 +863,103 @@
             <path id="path" fill="none" style="stroke-linejoin: round;" />
         </p:Content>
     </Shape>
+    <Shape id="freecurvy2" displayName="free cruvy2" icon="Icons/freecurvy.png">
+        <Properties>
+            <PropertyGroup name="Common">
+                <Property displayName="Start" name="startPin" p:connectTo="*" type="Handle">0,0</Property>
+                <Property displayName="b" name="b" type="Handle">100,0</Property>
+                <Property displayName="Center" name="centerPin" type="Handle">100,50</Property>
+                <Property displayName="c" name="c" type="Handle">100,100</Property>
+                <Property displayName="End" name="endPin" p:connectTo="*" type="Handle">200,100</Property>
+                <Property displayName="Start Arrow" name="withStartArrow" type="Bool">true</Property>
+                <Property displayName="End Arrow" name="withEndArrow" type="Bool">false</Property>
+            </PropertyGroup>
+            <PropertyGroup name="Border">
+                <Property displayName="Border Color" name="strokeColor" type="Color">
+                    <E>$$strokeColor</E>
+                </Property>
+                <Property displayName="Border Style" name="strokeStyle" type="StrokeStyle">
+                    <E>$$strokeStyle</E>
+                </Property>
+            </PropertyGroup>
+        </Properties>
+        <Behaviors>
+            <For ref="path">
+                <StrokeColor>$strokeColor</StrokeColor>
+                <StrokeStyle>$strokeStyle</StrokeStyle>
+                <D>
+                    <![CDATA[
+                    var spec = [M($startPin.x, $startPin.y), C($startPin.x, $startPin.y, $b.x, $b.y, $centerPin.x, $centerPin.y), M($centerPin.x, $centerPin.y), C($centerPin.x, $centerPin.y, $c.x, $c.y, $endPin.x, $endPin.y)]
+                    
+
+                    len = 8
+
+                    if($withStartArrow.value==true){
+
+						aA = ($b.x - $startPin.x == 0)  ?  0 :  Math.atan(($b.y - $startPin.y) / ($b.x - $startPin.x))
+                        aB = aA + Math.PI/4
+                        aC = aA - Math.PI/4
+                        console.log( "aA aB aC = " + aA + ", " + aB + ", " + aC)
+
+                        if($b.x - $startPin.x >= 1e-3 ){ 
+                            console.log(">>")
+                            x00 = $startPin.x + len * Math.cos(aB)
+                            y00 = $startPin.y + len * Math.sin(aB)
+                            x01 = $startPin.x + len * Math.cos(aC) 
+                            y01 = $startPin.y + len * Math.sin(aC)
+
+                        }else if($b.x - $startPin.x < 1e-3){
+                            console.log("<<")
+                            x00 = $startPin.x - len * Math.cos(aB)
+                            y00 = $startPin.y - len * Math.sin(aB)
+                            x01 = $startPin.x - len * Math.cos(aC)
+                            y01 = $startPin.y - len * Math.sin(aC)
+
+                        }
+                        console.log("x00, y00, x01, y01: (" + x00 + " " + y00 + " ) (" + x01 + " " + y01 + " )")
+
+                        spec.unshift(M($startPin.x, $startPin.y), L(x00, y00),
+                                    M($startPin.x, $startPin.y), L(x01, y01));
+                    }
+
+                    if($withEndArrow.value==true){
+
+						aA = ($c.x - $endPin.x == 0)  ?  0 :  Math.atan(($c.y - $endPin.y) / ($c.x - $endPin.x))
+                        aB = aA + Math.PI/4
+                        aC = aA - Math.PI/4
+                        console.log( "aA aB aC = " + aA + ", " + aB + ", " + aC)
+
+                        if($c.x - $endPin.x >= 1e-3 ){ 
+                            console.log(">>")
+                            x00 = $endPin.x + len * Math.cos(aB)
+                            y00 = $endPin.y + len * Math.sin(aB)
+                            x01 = $endPin.x + len * Math.cos(aC) 
+                            y01 = $endPin.y + len * Math.sin(aC)
+
+                        }else if($c.x - $endPin.x < 1e-3){
+                            console.log("<<")
+                            x00 = $endPin.x - len * Math.cos(aB)
+                            y00 = $endPin.y - len * Math.sin(aB)
+                            x01 = $endPin.x - len * Math.cos(aC)
+                            y01 = $endPin.y - len * Math.sin(aC)
+
+                        }
+                        console.log("x00, y00, x01, y01: (" + x00 + " " + y00 + " ) (" + x01 + " " + y01 + " )")
+
+                        spec.unshift(M($endPin.x, $endPin.y), L(x00, y00),
+                                    M($endPin.x, $endPin.y), L(x01, y01));
+                    }
+
+                    spec
+                ]]>
+                </D>
+            </For>
+        </Behaviors>
+        <p:Content xmlns:p="http://www.evolus.vn/Namespace/Pencil"
+            xmlns="http://www.w3.org/2000/svg">
+            <path id="path" fill="none" style="stroke-linejoin: round;" />
+        </p:Content>
+    </Shape>	
     <Shape id="multi-vetical-horizontal-line" displayName="multi-vetical-horizontal-line" icon="Icons/multi-vetical-horizontal-line.png">
         <Properties>
             <PropertyGroup name="Common">
